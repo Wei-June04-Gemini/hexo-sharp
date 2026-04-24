@@ -1,0 +1,28 @@
+name = "hexo-sharp"
+type = "javascript"
+zone_id = ""
+route = ""
+workers_dev = true
+compatibility_date = "2022-04-04"
+
+kv_namespaces = [{ binding = "HSPKV", id = "c09441aa5fd3432fb1c31ac4b7b89c24" }]
+
+[build]
+command = "pnpm build"
+
+[build.upload]
+format = "service-worker"
+
+[site]
+bucket = './dist'
+entry-point = './'
+exclude = ["worker.js", "worker.js.map"]
+
+# [secrets]
+# JWT_SECRET
+
+[miniflare]
+kv_persist = true
+
+[miniflare.globals]
+JWT_SECRET = "1145141919810"

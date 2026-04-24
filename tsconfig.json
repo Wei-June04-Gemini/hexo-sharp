@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "lib": ["esnext", "DOM", "DOM.Iterable"],
+    "alwaysStrict": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "types": [
+      "@cloudflare/workers-types",
+      "@types/jest",
+      "@types/service-worker-mock",
+      "@types/node"
+    ],
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "test"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "CommonJS",
+      "esModuleInterop": true
+    }
+  }
+}

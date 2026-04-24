@@ -1,0 +1,17 @@
+POST http://127.0.0.1:8787/api/kv/key HTTP/1.1
+Content-Type: application/json
+
+{"value": "b"}
+
+###
+GET http://127.0.0.1:8787/api/kv/key HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU5MjkyNDksImlhdCI6MTY0NTMyNDQ0OX0.-ZrhBubJgawiNrj8JTX-MGhZZmIfhXUjaYOZ61MMgsQ
+
+###
+DELETE http://127.0.0.1:8787/api/kv/key HTTP/1.1
+
+###
+POST http://127.0.0.1:8787/api/auth HTTP/1.1
+Content-Type: application/json
+
+{"password": "114514"}
